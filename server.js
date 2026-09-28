@@ -3,7 +3,7 @@ import leetcodeRouter from "./routes.js";
 
 const app = express();
 
-app.use("/", leetcodeRouter);
+app.use("/leetcode", leetcodeRouter);
 
 app.get("/health", (req, res) => {
   res.status(200).json({

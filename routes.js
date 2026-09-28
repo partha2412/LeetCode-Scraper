@@ -11,7 +11,7 @@ app.get("/:username", async (req, res) => {
     const response = await extract(url);
     res.status(200).json(response);
   } catch (error) {
-    console.error(error);
+    // console.error(error);
     res.status(500).json({ message: "Failed to scrape profile", error: error });
   }
 });
