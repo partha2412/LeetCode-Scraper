@@ -9,10 +9,10 @@ app.get("/:username", async (req, res) => {
 
   try {
     const response = await extract(url);
-    res.status(200).json(response);
+    res.status(200).send(response);
   } catch (error) {
-    // console.error(error);
-    res.status(500).json({ message: "Failed to scrape profile", error: error });
+    console.error(error);
+    res.status(500).send({ message: "Failed to scrape profile", error: error });
   }
 });
 
