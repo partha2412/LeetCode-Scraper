@@ -12,7 +12,7 @@ app.get("/:username", async (req, res) => {
     res.status(200).json(response);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: "Failed to scrape profile" });
+    res.status(500).json({ message: "Failed to scrape profile", error: error });
   }
 });
 
